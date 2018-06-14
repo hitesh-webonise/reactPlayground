@@ -1,1 +1,2 @@
-Assignment 1
+# Run npm install
+# Run npm start
