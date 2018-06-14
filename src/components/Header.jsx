@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 
 export default class Header extends Component {
-	constructor(){
+	constructor() {
 		super()
 		this.handleClick = this.handleClick.bind(this);
+		this.state = {
+			changeBg: ''
+		}
 	}
 
-	handleClick(event) {
-		let inputBox = document.querySelector('.inputBox');
-		if (!Array.from(inputBox.classList).includes('inputBox-change'))
-			inputBox.className += " inputBox-change";
+	handleClick() {
+		if (this.state.changeBg == '') {
+			this.setState({
+				changeBg: 'inputBox-change'
+			});
+		}
+		else {
+			this.setState({
+				changeBg: ''
+			});
+		}
+
 	}
 
 	render() {
 		return (
-			<div className="inputBox">
-				<input type="text" onBlur = {(event) => {this.props.handleText(event.target.value)}}/>
+			<div className={`inputBox ${this.state.changeBg}`}>
+				<input type="text" onBlur={(event) => { this.props.handleText(event.target.value) }} />
 				<button onClick={this.handleClick}>change</button>
 			</div>
 		);

@@ -8,9 +8,9 @@ import { createStore } from 'redux';
 class App extends Component {
 	constructor() {
 		super();
-		this.state = {
-			text: ''
-		};
+			this.state = {
+				text: ''
+			};
 		this.handleText = this.handleText.bind(this);
 	}
 
@@ -22,10 +22,10 @@ class App extends Component {
 
 	render() {
 		return (
-			<section>
+			<div className="wrapper">
 				<h2>{this.state.text}</h2>
 				<Header handleText = {this.handleText} />
-			</section>
+			</div>
 		);
 	}
 }
