@@ -1,0 +1,35 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+section{
+    padding: 35px;
+    background: lightgray;
+}
+
+.inputBox{
+    padding: 35px;
+    background: lightcoral;
+    font-size: 200%;
+}
+.inputBox-change{
+    background: lightsalmon;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 3px;    
+}
+button{
+    background: coral;
+    border: 1px solid   #ff571a;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-left: 15px;
+    padding: 10px 15px;
+    outline: none;
+}
